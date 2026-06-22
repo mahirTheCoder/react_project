@@ -1,48 +1,51 @@
 import React from 'react'
 import { Link } from 'react-router'
+import imgLeft from '../../assets/image 8.png'
+import imgRightTop from '../../assets/image 9.png'
+import imgRightBottom from '../../assets/image 10.png'
 
 const Discount = () => {
   return (
-    <section className="w-full py-29 bg-white">
+    <section className="w-full py-24 bg-white">
       <div className="container mx-auto px-4">
         
-        {/* Main layout wrapper */}
+        {/* Layout wrapper */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start justify-center">
           
-          {/* Left Side Banner Link (w-571 h-548 layout) */}
+          {/* Left Side (w-571px h-548px) */}
           <Link 
             to="/" 
-            className="w-full max-w-[571px] aspect-[571/548] lg:h-[548px] block rounded-md overflow-hidden shadow-sm group mx-auto"
+            className="w-full lg:w-143 lg:h-137 block rounded-md overflow-hidden shadow-sm group mx-auto"
           >
             <img 
-              src="/src/assets/image 8.png" 
+              src={imgLeft} 
               alt="Discount Banner Left" 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
             />
           </Link>
 
-          {/* Right Side Banners Column */}
-          <div className="w-full max-w-[570px] flex flex-col gap-6 mx-auto">
+          {/* Right Side Column */}
+          <div className="w-full lg:w-142 flex flex-col gap-6 mx-auto">
             
-            {/* Right Top Card Link (w-570 h-260 layout) */}
+            {/* Right Top (h-260px) */}
             <Link 
               to="/" 
-              className="w-full aspect-[570/260] sm:h-[260px] block rounded-md overflow-hidden shadow-sm group"
+              className="w-full h-65 block rounded-md overflow-hidden shadow-sm group"
             >
               <img 
-                src="/src/assets/image 9.png" /* Add your top right banner image path here */
+                src={imgRightTop} 
                 alt="Discount Banner Right Top" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
               />
             </Link>
 
-            {/* Right Bottom Card Link (w-570 h-260 layout) */}
+            {/* Right Bottom (h-260px) */}
             <Link 
               to="/" 
-              className="w-full aspect-[570/260] sm:h-[260px] block rounded-md overflow-hidden shadow-sm group"
+              className="w-full h-65 block rounded-md overflow-hidden shadow-sm group"
             >
               <img 
-                src="/src/assets/image 10.png" 
+                src={imgRightBottom} 
                 alt="Discount Banner Right Bottom" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
               />
@@ -51,8 +54,10 @@ const Discount = () => {
           </div>
 
         </div>
+     
 
       </div>
+
     </section>
   )
 }
