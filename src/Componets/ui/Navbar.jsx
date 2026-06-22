@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router'
 import { IoIosArrowDropdown } from 'react-icons/io'
-import { FiSearch, FiUser, FiMenu } from 'react-icons/fi'
+import { FiSearch, FiUser, FiMenu, FiX } from 'react-icons/fi'
 import { HiOutlineShoppingBag } from 'react-icons/hi2'
 
 const Navbar = () => {
+  const [searchOpen, setSearchOpen] = useState(false);
+
   const navItems = [
     { 
       navContenet: 'Home', 
@@ -59,8 +61,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="pt-5 w-full bg-[#F7F5EB]  border-b border-gray-100 shadow-sm sticky top-0 z-50">
-      <div className="container px-4 ">
+    <nav className="pt-5 w-full bg-[#F7F5EB] border-b border-gray-100 shadow-sm sticky top-0 z-50">
+      <div className="container mx-auto px-4 relative">
         <div className="menu_row flex items-center justify-between py-5">
           
           {/* Logo */}
@@ -109,12 +111,12 @@ const Navbar = () => {
 
           {/* Desktop Right Side */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="menu_button w-36 h-12 bg-brand rounded-full  font-prim font-bold text-white hover:bg-prim duration-500 uppercase tracking-wider text-sm">
+            <button className="menu_button w-36 h-12 bg-brand rounded-full font-prim font-bold text-white hover:bg-prim duration-500 uppercase tracking-wider text-sm">
               Read More
             </button>
             <div className="flex items-center gap-2">
-              <button className="w-10 h-10 bg-bg-main flex items-center justify-center text-prim hover:bg-brand hover:text-white transition-all shadow-sm text-lg rounded-sm">
-                <FiSearch />
+              <button onClick={() => setSearchOpen(!searchOpen)} className="w-10 h-10 bg-bg-main flex items-center justify-center text-prim hover:bg-brand hover:text-white transition-all shadow-sm text-lg rounded-sm cursor-pointer">
+                {searchOpen ? <FiX /> : <FiSearch />}
               </button>
               <button className="w-10 h-10 bg-bg-main flex items-center justify-center text-prim hover:bg-brand hover:text-white transition-all shadow-sm text-lg rounded-sm">
                 <FiUser />
@@ -127,8 +129,8 @@ const Navbar = () => {
 
           {/* Mobile Layout */}
           <div className="flex lg:hidden items-center gap-3">
-            <button className="w-9 h-9 bg-bg-main flex items-center justify-center text-prim text-base rounded-sm">
-              <FiSearch />
+            <button onClick={() => setSearchOpen(!searchOpen)} className="w-9 h-9 bg-bg-main flex items-center justify-center text-prim text-base rounded-sm cursor-pointer">
+              {searchOpen ? <FiX /> : <FiSearch />}
             </button>
             <button className="w-9 h-9 bg-bg-main flex items-center justify-center text-prim text-base rounded-sm">
               <HiOutlineShoppingBag />
@@ -139,6 +141,22 @@ const Navbar = () => {
           </div>
 
         </div>
+
+        {/* Search Bar - Slides down perfectly right below the navbar row */}
+        <div className={`absolute left-0 right-0 top-full bg-white border-b border-gray-100 shadow-md px-4 py-4 z-40 transition-all duration-300 origin-top transform ${searchOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-0 invisible'}`}>
+          <div className="max-w-[800px] mx-auto flex items-center border border-gray-200 rounded overflow-hidden">
+            <input 
+              type="text" 
+              placeholder="Search for organic food, vegetables..." 
+              className="w-full px-4 h-11 text-sm text-prim outline-none"
+              autoFocus={searchOpen}
+            />
+            <button className="bg-brand text-white px-6 h-11 font-prim font-medium hover:bg-prim transition-colors duration-300 cursor-pointer text-sm">
+              Search
+            </button>
+          </div>
+        </div>
+
       </div>
     </nav>
   )
