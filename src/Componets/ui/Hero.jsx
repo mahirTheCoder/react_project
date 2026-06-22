@@ -76,7 +76,7 @@ const Hero = () => {
 
                 {/* Image side */}
                 <div className="w-full lg:w-1/2 flex justify-center items-center relative z-10 order-1 lg:order-2">
-                  <div className="w-full max-w-[320px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[680px] xl:max-w-200 aspect-square lg:aspect-auto flex items-center justify-center">
+                  <div className="w-full max-w-[320px] sm:max-w-113 md:max-w-138 lg:max-w-170 xl:max-w-200 aspect-square lg:aspect-auto flex items-center justify-center">
                     <img 
                       src={slide.img} 
                       alt="Organic Food" 

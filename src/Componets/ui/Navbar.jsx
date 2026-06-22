@@ -12,8 +12,8 @@ const Navbar = () => {
       navContenet: 'Home', 
       navLinks: '/', 
       dropDown: [
-        { dropContenet: 'Home Style 1', dropLink: '/home-1' },
-        { dropContenet: 'Home Style 2', dropLink: '/home-2' }
+        { dropContenet: 'Home Style 1', dropLink: '/' },
+        { dropContenet: 'Home Style 2', dropLink: '/' }
       ] 
     },
     { 
@@ -21,7 +21,7 @@ const Navbar = () => {
       navLinks: '/about',
       dropDown: [
         { dropContenet: 'About Us', dropLink: '/about-us' },
-        { dropContenet: 'Our Team', dropLink: '/team' }
+        { dropContenet: 'Our Team', dropLink: '/' }
       ]
     },
     { 
@@ -29,39 +29,39 @@ const Navbar = () => {
       navLinks: '/shop',
       dropDown: [
         { dropContenet: 'Shop Grid', dropLink: '/shop-grid' },
-        { dropContenet: 'Shop Details', dropLink: '/shop-details' },
-        { dropContenet: 'Cart', dropLink: '/cart' }
+        { dropContenet: 'Shop Details', dropLink: '/' },
+        { dropContenet: 'Cart', dropLink: '/' }
       ]
     },
     { 
       navContenet: 'News', 
       navLinks: '/news',
       dropDown: [
-        { dropContenet: 'News Grid', dropLink: '/news-grid' },
-        { dropContenet: 'News Details', dropLink: '/news-details' }
+        { dropContenet: 'News Grid', dropLink: '/' },
+        { dropContenet: 'News Details', dropLink: '/' }
       ]
     },
     { 
       navContenet: 'Pages', 
       navLinks: '/pages',
       dropDown: [
-        { dropContenet: 'FAQ', dropLink: '/faq' },
-        { dropContenet: 'Gallery', dropLink: '/gallery' },
-        { dropContenet: '404 Page', dropLink: '/404' }
+        { dropContenet: 'FAQ', dropLink: '/' },
+        { dropContenet: 'Gallery', dropLink: '/' },
+        { dropContenet: '404 Page', dropLink: '/' }
       ]
     },
     { 
       navContenet: 'Contact', 
       navLinks: '/contact',
       dropDown: [
-        { dropContenet: 'Contact Style 1', dropLink: '/contact-1' },
-        { dropContenet: 'Contact Style 2', dropLink: '/contact-2' }
+        { dropContenet: 'Contact Style 1', dropLink: '/' },
+        { dropContenet: 'Contact Style 2', dropLink: '/' }
       ]
     }
   ];
 
   return (
-    <nav className="pt-5 w-full bg-[#F7F5EB] border-b border-gray-100 shadow-sm sticky top-0 z-50">
+    <nav className="pt-5 w-full bg-[#F7F5EB] sticky top-0 z-50">
       <div className="container mx-auto px-4 relative">
         <div className="menu_row flex items-center justify-between py-5">
           
@@ -144,7 +144,7 @@ const Navbar = () => {
 
         {/* Search Bar - Slides down perfectly right below the navbar row */}
         <div className={`absolute left-0 right-0 top-full bg-white border-b border-gray-100 shadow-md px-4 py-4 z-40 transition-all duration-300 origin-top transform ${searchOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-0 invisible'}`}>
-          <div className="max-w-[800px] mx-auto flex items-center border border-gray-200 rounded overflow-hidden">
+          <div className="max-w-200 mx-auto flex items-center border border-gray-200 rounded overflow-hidden">
             <input 
               type="text" 
               placeholder="Search for organic food, vegetables..." 
