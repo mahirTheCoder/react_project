@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
+import AOS from 'aos';
 import Layout from './Componets/Layout/Layout'
 import Home from './pages/Home'
-
 const App = () => {
   return (
     <BrowserRouter>

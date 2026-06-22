@@ -1,10 +1,11 @@
 import React from "react";
+import TopHeader from "../Componets/ui/TopHeader";
 
 const Home = () => {
   return (
-    <div className="container">
-      <div>Home</div>
-    </div>
+   <>
+<TopHeader/>
+   </>
   );
 };
 
