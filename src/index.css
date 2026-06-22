@@ -12,7 +12,7 @@
   --color-brand: #80B500;
   
   --bg-brand: #80B500;
-  --bg-main: #F7F5EB;
+  --bg-com: #F7F5EB;
   --bg-card: #FFFFFF;
   
 
@@ -20,3 +20,20 @@
   --font-sec: "DM Sans", sans-serif;
 }
 
+
+/* Swiper Pagination Custom Style */
+.custom-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1 !important;
+  opacity: 1 !important;
+  border-radius: 9999px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Active dot layout */
+.custom-pagination .swiper-pagination-bullet-active {
+  width: 24px !important;
+  background: var(--primary, #7364db) !important; /* Uses your theme color or default brand */
+}
