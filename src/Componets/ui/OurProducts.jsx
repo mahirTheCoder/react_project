@@ -152,7 +152,7 @@ const OurProducts = () => {
                 />
 
                 {/* Badge layout */}
-             <span className="absolute top-3 left-3 bg-brand text-white text-xs font-bold px-2 py-0.5 rounded-tl-xl rounded-br-xl font-prim">
+                <span className="absolute top-3 left-3 bg-brand text-white text-xs font-bold px-2 py-0.5 rounded-tl-xl rounded-br-xl font-prim">
                   {product.discount}
                 </span>
 
@@ -195,7 +195,7 @@ const OurProducts = () => {
                   <FiStar />
                 </div>
 
-                <h3 className="font-prim font-bold text-prim text-sm sm:text-base tracking-wide truncate w-full max-w-[160px]">
+                <h3 className="font-prim font-bold text-prim text-sm sm:text-base tracking-wide truncate w-full max-w-40">
                   {product.title}
                 </h3>
 

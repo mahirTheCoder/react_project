@@ -37,3 +37,35 @@
   width: 24px !important;
   background: var(--primary, #7364db) !important; /* Uses your theme color or default brand */
 }
+
+
+/* -----infinite scroll code  */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* ট্র্যাকের অর্ধেক গিয়ে লুপ রিস্টার্ট হবে */
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* মাউস হোভার করলে স্ক্রল থামানোর জন্য (ঐচ্ছিক, ভালো লুক দেয়) */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* স্লাইডারের স্ক্রলবার হাইড করার জন্য */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
