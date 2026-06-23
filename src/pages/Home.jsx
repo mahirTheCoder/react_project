@@ -5,6 +5,7 @@ import Hero from "../Componets/ui/Hero";
 import Discount from "../Componets/ui/Discount";
 import OurProducts from "../Componets/ui/OurProducts";
 import HotDeals from "../Componets/ui/HotDeals";
+import Products from "../Componets/ui/Products";
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
       <Discount/>
       <OurProducts/>
       <HotDeals/>
-      
+      <Products/>
+
      
     </>
   );

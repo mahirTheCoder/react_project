@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiShoppingBag, FiEye, FiHeart, FiStar } from 'react-icons/fi'
+import { Link } from 'react-router'
 
 // Directly destructuring data inside the component parameter
 const ProductCard = ({ title, price, oldPrice, discount, img }) => {
@@ -16,23 +17,37 @@ const ProductCard = ({ title, price, oldPrice, discount, img }) => {
 
         {/* Badge layout */}
         {discount && (
-          <span className="absolute top-3 left-3 bg-brand text-white text-[10px] font-bold px-2 py-0.5 rounded-full font-prim">
+          <span className="absolute top-5 left-3 bg-brand text-white text-xs font-bold px-2 py-0.5 rounded-tl-xl rounded-br-xl font-prim">
             {discount}
           </span>
         )}
 
         {/* Animated Action Buttons */}
-        <div className="absolute top-5 right-3 flex flex-col gap-2 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 duration-300 z-10">
-          <button className="w-9 h-9 bg-white text-prim hover:bg-brand hover:text-white rounded-full flex items-center justify-center shadow-md transition-colors cursor-pointer text-base">
-            <FiShoppingBag />
-          </button>
-          <button className="w-9 h-9 bg-white text-prim hover:bg-brand hover:text-white rounded-full flex items-center justify-center shadow-md transition-colors cursor-pointer text-base">
-            <FiEye />
-          </button>
-          <button className="w-9 h-9 bg-white text-prim hover:bg-brand hover:text-white rounded-full flex items-center justify-center shadow-md transition-colors cursor-pointer text-base">
-            <FiHeart />
-          </button>
-        </div>
+          <div className="absolute top-5 right-3 flex flex-col gap-2 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 duration-300 z-10">
+                  {/* Cart Link */}
+                  <Link
+                    to="/"
+                    className="w-9 h-9 bg-white text-prim hover:bg-brand hover:text-white rounded-full flex items-center justify-center shadow-md transition-colors cursor-pointer text-base"
+                  >
+                    <FiShoppingBag />
+                  </Link>
+
+                  {/* Details Link */}
+                  <Link
+                    to="/"
+                    className="w-9 h-9 bg-white text-prim hover:bg-brand hover:text-white rounded-full flex items-center justify-center shadow-md transition-colors cursor-pointer text-base"
+                  >
+                    <FiEye />
+                  </Link>
+
+                  {/* Wishlist Link */}
+                  <Link
+                    to="/"
+                    className="w-9 h-9 bg-white text-prim hover:bg-brand hover:text-white rounded-full flex items-center justify-center shadow-md transition-colors cursor-pointer text-base"
+                  >
+                    <FiHeart />
+                  </Link>
+                </div>
       </div>
 
       {/* Product Bottom Content side */}

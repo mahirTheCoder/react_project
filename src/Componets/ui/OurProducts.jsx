@@ -152,7 +152,7 @@ const OurProducts = () => {
                 />
 
                 {/* Badge layout */}
-                <span className="absolute top-3 left-3 bg-brand text-white text-xs font-bold px-2 py-0.5 rounded-tl-xl rounded-br-xl font-prim">
+             <span className="absolute top-3 left-3 bg-brand text-white text-xs font-bold px-2 py-0.5 rounded-tl-xl rounded-br-xl font-prim">
                   {product.discount}
                 </span>
 
