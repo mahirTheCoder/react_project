@@ -30,7 +30,7 @@ const LatestBlog = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-12 md:py-20 select-none">
+    <section className="w-full bg-white py-30 md:py-20 select-none">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Heading */}
         <div className="text-center mb-12 md:mb-16">
