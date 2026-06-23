@@ -4,6 +4,7 @@ import Navbar from "../Componets/ui/Navbar";
 import Hero from "../Componets/ui/Hero";
 import Discount from "../Componets/ui/Discount";
 import OurProducts from "../Componets/ui/OurProducts";
+import HotDeals from "../Componets/ui/HotDeals";
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
       <Hero/>
       <Discount/>
       <OurProducts/>
+      <HotDeals/>
+      
      
     </>
   );
