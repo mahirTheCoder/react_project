@@ -61,11 +61,16 @@
   animation-play-state: paused;
 }
 
-/* স্লাইডারের স্ক্রলবার হাইড করার জন্য */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+/* স্লাইডারের ডিফল্ট ডট ও অ্যারো হাইড করার জন্য */
+.slick-prev, .slick-next {
+  display: none !important;
 }
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.slick-track {
+  display: flex !important;
+}
+.slick-slide {
+  height: inherit !important;
+}
+.slick-slide > div {
+  height: 100%;
 }
