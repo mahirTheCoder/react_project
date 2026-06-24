@@ -74,3 +74,38 @@
 .slick-slide > div {
   height: 100%;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* মেইন অ্যানিমেশন ট্র্যাক */
+.custom-marquee {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.custom-marquee:hover,
+.custom-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+.marquee-card {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.marquee-card:hover,
+.marquee-card:focus,
+.marquee-card:active {
+  transform: scale(1.04); /* কার্ডটি ৪% জুম হবে */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* জুমের সাথে শ্যাডো বাড়বে */
+  z-index: 10; /* জুম হওয়া কার্ডটি যেন পাশের কার্ডের ওপরে ভেসে থাকে */
+  outline: none;
+}
