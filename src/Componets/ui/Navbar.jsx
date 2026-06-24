@@ -18,7 +18,7 @@ const Navbar = () => {
     },
     { 
       navContenet: 'About', 
-      navLinks: '/about',
+      navLinks: '/About',
       dropDown: [
         { dropContenet: 'About Us', dropLink: '/about-us' },
         { dropContenet: 'Our Team', dropLink: '/' }
